@@ -1,32 +1,19 @@
 ---
-import "../styles/global.css";
-
-const pageTitle = "My Astro Learning Blog";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Blog";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitle}</h1>
-    <h2>Did you know that drinking a beer a day...?</h2>
-    <p>
-      It is good for the heart and general health. Especially if you drink this
-      beer in the iconic Kikes Bar. You can also enjoy different distractions
-      like babysitting for a day, with a very nice girl called Sara.
-    </p>
-    <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-      <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <h2>Did you know that drinking a beer a day...?</h2>
+  <p>
+    It is good for the heart and general health. Especially if you drink this
+    beer in the iconic Kikes Bar. You can also enjoy different distractions like
+    babysitting for a day, with a very nice girl called Sara.
+  </p>
+  <ul>
+    <li><a href="/posts/post-1/">Post 1</a></li>
+    <li><a href="/posts/post-2/">Post 2</a></li>
+    <li><a href="/posts/post-3/">Post 3</a></li>
+  </ul>
+</BaseLayout>
